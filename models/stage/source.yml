@@ -1,0 +1,42 @@
+version: 2
+
+sources:
+  - name: raw_person
+    schema: AZURE_SQL_DB_PERSON
+    database: raw
+
+    tables:
+      - name: address	
+        identifier: address
+      - name: businessentityaddress	
+        identifier: businessentityaddress
+      - name: countryregion	
+      - name: person	     
+      - name: stateprovince	
+        
+
+  - name: raw_sales
+    schema: AZURE_SQL_DB_SALES
+    database: raw
+
+    tables:
+      - name: salesorderheader
+      - name : salesorderheadersalesreason
+      - name: salesorderdetail
+        identifier: salesorderdetail
+      - name: salesreason
+      - name: salesterritory    
+      - name : store  
+      - name : customer
+        identifier: customer
+
+      
+
+  - name: raw_product
+    schema: AZURE_SQL_DB_PRODUCTION
+    database: raw
+
+    tables:
+      - name: product
+      - name: productcategory
+      - name: productsubcategory
