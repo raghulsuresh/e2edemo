@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dim_address
+    description: contains address information for the customers.
+
+  - name: dim_customer
+    description: contains customers details for company.
+
+  - name: dim_date
+    description: contains order status details.
+
+  - name: dim_orderstatus
+    description: contains product information and product hierarchy.
+
+  - name: dim_product
+    description: contains sales territory details
+
+  - name: dim_territory
+    description: date dimension for datatime analysis
+
+  - name: fact_sales
+    description: contains sales transaction across dims included in this data model.
