@@ -7,5 +7,16 @@
     {%- endif -%}
 
     {%- set default_schema = target.schema -%}
-    {{ default_schema }}_{{ custom_schema_name | trim }}
+    {%- set environment = env_var('DBT_ENV_NAME','NONE') -%}
+
+        {%- if environment == 'CI' -%}
+
+            {{ default_schema }}
+
+        {%- else -%}
+
+            {{ custom_schema_name | trim }}
+        
+        {%- endif -%}
+
 {%- endmacro %}
