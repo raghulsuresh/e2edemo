@@ -1,4 +1,5 @@
 with sales as (select * from {{ ref("int_fact_sales") }}) 
 
-select * 
+select *,
+--test 
 from sales
